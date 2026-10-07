@@ -1559,6 +1559,10 @@ hr.fancy::before {
     color       : var(--color-text-dark);
 }
 
+.attention-getter b {
+    font-weight: 600;
+}
+
 .pull-quote {
     position   : relative;
     padding    : 0;
@@ -3569,7 +3573,7 @@ img.u-pull-left {
     font-size: calc(var(--text-sm));
     margin-top: 0;
     margin-bottom: var(--vspace-0_125);
-    color: var(--color-gray-4);
+    color: var(--color-gray-3);
 }
 
 .pub__timeframe {
@@ -3657,6 +3661,12 @@ img.u-pull-left {
 .s-works {
     padding-top    : var(--vspace-5);
     padding-bottom : var(--vspace-3_5);
+}
+
+.works-intro {
+    font-size: clamp(2.8rem, 4vw, 4.8rem);
+    line-height: 1.1;
+    max-width: 1050px;
 }
 
 .s-works .h1 {
@@ -4311,71 +4321,80 @@ img.u-pull-left {
     }
 }
 
-/* ------------------------------------------------------------------- 
- * ## Typewriter effect 1
- * ------------------------------------------------------------------- */
+/* ---------------------------------------------------
+ * Typewriter greeting
+ * Kia Ora → Hello → Ayubowan
+ * --------------------------------------------------- */
 @keyframes typing {
 
     /* empty */
-    0%, 10% {
+    0%, 8% {
         content: "";
     }
 
     /* Kia Ora */
-    12% { content: " K"; }
-    14% { content: " Ki"; }
-    16% { content: " Kia"; }
-    18% { content: " Kia "; }
-    20% { content: " Kia O"; }
-    22% { content: " Kia Or"; }
-    24% { content: " Kia Ora"; }
-    29% { content: " Kia Ora"; }
+    10% { content: "K"; }
+    12% { content: "Ki"; }
+    14% { content: "Kia"; }
+    16% { content: "Kia "; }
+    18% { content: "Kia O"; }
+    20% { content: "Kia Or"; }
+    22% { content: "Kia Ora"; }
+
+    /* hold */
+    22%, 34% {
+        content: "Kia Ora";
+    }
 
     /* delete */
-    31% { content: " Kia Or"; }
-    32% { content: " Kia O"; }
-    33% { content: " Kia "; }
-    34% { content: " Kia"; }
-    35% { content: " Ki"; }
-    36% { content: " K"; }
-    37% { content: ""; }
+    36% { content: "Kia Or"; }
+    37% { content: "Kia O"; }
+    38% { content: "Kia "; }
+    39% { content: "Kia"; }
+    40% { content: "Ki"; }
+    41% { content: "K"; }
+    42% { content: ""; }
 
-    /* Hallo */
-    40% { content: " H"; }
-    42% { content: " Ha"; }
-    44% { content: " Hal"; }
-    46% { content: " Hall"; }
-    48% { content: " Hallo"; }
-    53% { content: " Hallo"; }
+    /* Hello */
+    45% { content: "H"; }
+    47% { content: "He"; }
+    49% { content: "Hel"; }
+    51% { content: "Hell"; }
+    53% { content: "Hello"; }
+
+    /* hold */
+    53%, 63% {
+        content: "Hello";
+    }
 
     /* delete */
-    55% { content: " Hall"; }
-    56% { content: " Hal"; }
-    57% { content: " Ha"; }
-    58% { content: " H"; }
-    59% { content: ""; }
+    65% { content: "Hell"; }
+    66% { content: "Hel"; }
+    67% { content: "He"; }
+    68% { content: "H"; }
+    69% { content: ""; }
 
     /* Ayubowan */
-    62% { content: " A"; }
-    64% { content: " Ay"; }
-    66% { content: " Ayu"; }
-    68% { content: " Ayub"; }
-    70% { content: " Ayubo"; }
-    72% { content: " Ayubow"; }
-    74% { content: " Ayubowa"; }
-    76% { content: " Ayubowan"; }
-    92% { content: " Ayubowan"; }
+    72% { content: "A"; }
+    74% { content: "Ay"; }
+    76% { content: "Ayu"; }
+    78% { content: "Ayub"; }
+    80% { content: "Ayubo"; }
+    82% { content: "Ayubow"; }
+    84% { content: "Ayubowa"; }
+    86% { content: "Ayubowan"; }
+
+    /* hold */
+    86%, 96% {
+        content: "Ayubowan";
+    }
 
     /* delete */
-    94% { content: " Ayubowa"; }
-    95% { content: " Ayubow"; }
-    96% { content: " Ayubo"; }
-    97% { content: " Ayub"; }
-    98% { content: " Ayu"; }
-    99% { content: " Ay"; }
+    97% { content: "Ayubow"; }
+    98% { content: "Ayubo"; }
+    99% { content: "Ayu"; }
     100% { content: ""; }
 }
-
 
     /* pause */
 
@@ -4453,6 +4472,19 @@ img.u-pull-left {
     text-align: left;
 }
 
+.skills-group-title {
+    font-family: var(--font-1);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: var(--vspace-1);
+    margin-left: 52px;
+    padding-left: 0;
+    margin-bottom: var(--vspace-0_5);
+    color: var(--color-gray-3);
+}
+
 .pills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -4470,10 +4502,10 @@ img.u-pull-left {
     padding: 8px 16px;
     border: 1.5px solid var(--color-gray-8);
     border-radius: 20px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: var(--text-sm);
     color: var(--color-white);
-    background: var(--color-gray-9);
+    background: var(--color-gray-8);
     transition: all 0.3s ease;
     cursor: default;
 }

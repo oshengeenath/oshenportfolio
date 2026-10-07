@@ -870,3 +870,10 @@ button.swiper-pagination-bullet {
     transform : scale(1);
     opacity   : 1;
 }
+
+.hero-location {
+    font-size: 0.68em;
+    font-weight: 400;
+    opacity: 0.78;
+    letter-spacing: 0.02em;
+}
